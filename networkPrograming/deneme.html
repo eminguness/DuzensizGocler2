@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ülke Merkez Koordinatları</title>
+</head>
+<body>
+    <input type="text" id="countryInput" placeholder="Bir ülke adı yazın...">
+    <button onclick="findCountry()">Ara</button>
+
+    Google Haritalar API'sini yükleyin
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfixGXglC2fqh_uX8zc-CTCKQPT_SvJXI&libraries=places"></script>
+
+    <script>
+        function findCountry() {
+            var countryName = document.getElementById("countryInput").value;
+
+            // Google Haritalar Geocoding API'sini kullanarak ülkenin merkez koordinatlarını çekme
+            var geocoder = new google.maps.Geocoder();
+            geocoder.geocode({ address: countryName }, function(results, status) {
+                if (status === google.maps.GeocoderStatus.OK) {
+                    var location = results[0].geometry.location;
+                    console.log(countryName + " ülkesinin merkez koordinatları: " + location.lat() + ", " + location.lng());
+                } else {
+                    alert("Ülke bulunamadı!");
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+<div>
+    <h1>
+        Deneme
+    </h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga, voluptatem.
+    </p>
+</div>

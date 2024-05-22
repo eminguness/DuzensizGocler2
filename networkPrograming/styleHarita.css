@@ -1,0 +1,221 @@
+
+#line-chart2 {
+    display: block;
+    margin: 0 auto;
+    width: 650px;  /* İstediğiniz genişlik */
+    height: 650px; /* İstediğiniz yükseklik */
+    background-color: white;
+}
+    
+    
+    .haritaHeader {
+
+        color: black;
+        /* Metin rengi */
+        padding: 20px;
+        /* İç boşluk */
+        text-align: center;
+        /* Metni ortala */
+        border-bottom: 2px solid #ffffff;
+        /* Alt kenarlık */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        /* Gölge */
+        background: linear-gradient(90deg, rgba(45,45,45,1) 0%, rgba(70,70,70,1) 70%, rgba(240,240,240,1) 100%) ;
+    }
+    .harita-container {
+        border-bottom: 2px solid #ff0000;
+        /* Kırmızı alt kenarlık */
+        margin-bottom: 20px;
+        /* Alt boşluk */
+        border: 1px solid black;
+        box-sizing: border-box;
+        border-radius: 20px;
+        margin-bottom: 50px;
+        width: 60%;
+        height: 60%;
+        margin: auto;
+        position: relative;
+    }
+    #harita {
+        border: 1px solid black;
+        box-sizing: border-box;
+        border-radius: 20px;
+        width: 100%;
+        height: 100%;
+    }
+    body,
+    html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        overflow: auto;
+        background-color:rgb(7, 78, 102);
+        /* Sayfa arka planı siyah */
+        color: black;
+        background-image: url('göç.jpg');
+        background-size: cover; /* Resmi kaplamak için */
+        background-position: center; /* Resmin konumu */
+
+    }
+
+
+
+
+    .haritaHeader h1 {
+        margin: 0;
+        /* H1 iç boşluğu */
+        font-size: 30px;
+        /* Font büyüklüğü */
+        font-weight: bold;
+        /* Kalın font */
+    }
+
+
+
+
+
+
+    .haritaHeader a {
+        color: red;
+        /* Bağlantı rengi */
+        text-decoration: underline;
+        /* Alt çizgiyi kaldır */
+        margin-left: 10px;
+
+        /* Sol boşluk */
+    }
+
+    .haritaHeader a:hover {
+        text-decoration: underline;
+        /* Fare üzerine gelince alt çizgi ekle */
+    }
+
+    
+    
+    .Header2 {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    
+    .Header2 h2 {
+        text-align: center;
+        color: black;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    #grafikler {
+        text-align: center;
+        color: black;
+        font-size: 22px;
+        font-weight: bold;
+    }
+    
+    
+
+
+
+
+
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+    
+    .navbar {
+        background-color: #040402;
+        color: #fff;
+        padding: 15px 0;
+    }
+    
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    
+    .nav-links {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .nav-links li {
+        display: inline-block;
+        margin-left: 20px;
+    }
+    
+    .nav-links li:first-child {
+        margin-left: 0;
+    }
+    
+    .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    
+    .nav-links a:hover {
+        color: #ffc107;
+    }
+    
+
+
+
+    #footer {
+        background-color: #000; /* Footer arka plan rengi siyah */
+        color: #fff;
+        padding: 20px 0;
+        position: relative; /* Footer'ı pozisyonlandırmak için */
+    }
+    
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto; /* Sayfanın ortasına hizalamak için sol ve sağ marjları otomatik olarak ayarlar */
+        text-align: center;
+        font-size: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%; /* Footer yüksekliğini dikkate almak için */
+        position: absolute; /* Footer içeriğini pozisyonlandırmak için */
+        top: 50%; /* Yukarıdan aşağıya %50 pozisyonlama */
+        left: 50%; /* Soldan sağa %50 pozisyonlama */
+        transform: translate(-50%, -50%); /* Dikey ve yatay olarak ortalamak için */
+    }
+    
+    .footer-content a {
+        color: #fff;
+        text-decoration: none; /* Alt çizgiyi kaldırır */
+    }
+    
+    .footer-content a:hover {
+        text-decoration: underline; /* Fare üzerine gelince alt çizgi ekler */
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+

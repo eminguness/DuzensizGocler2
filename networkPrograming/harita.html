@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avrupa Ülkeleri Haritası</title>
+    <link rel="stylesheet" href="leaflet.css" />
+    <link rel="stylesheet" href="styleHarita.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+
+    
+
+    <script src="leaflet.js"></script>
+    <style>
+
+    </style>    
+</head>
+
+<script>
+    window.onload = function() {
+        var apiKey = "AIzaSyCfixGXglC2fqh_uX8zc-CTCKQPT_SvJXI"; // Google Haritalar API anahtarını buraya ekleyin
+
+        // Google Haritalar API'sini yükleyin
+        var script = document.createElement('script');
+        script.src = "https://maps.googleapis.com/maps/api/js?key=" + apiKey + "&libraries=places";
+        script.defer = true;
+        document.head.appendChild(script);
+    };
+</script>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">GÖÇ VERİLERİ</div>
+            <ul class="nav-links">
+                <li><a href="#">Harita</a></li>
+                <li><a href="#">Grafik</a></li>
+                <li><a href="#">İletişim</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="Header2">
+
+        <h2>
+            Harita
+        </h2>
+
+
+        <div class="harita-container">
+            <div id="harita"></div>
+            <input type="text" id="countryInput" placeholder="Bir ülke adı yazın..." style="height: 20px;">
+            <button onclick="findCountry()" style="height: 25px;">Ara</button>
+
+            <br><br><br>
+
+
+
+
+            <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+            <script>
+                var mymap = L.map('harita').setView([38, 35], 5); // Türkiye'nin merkezi
+
+
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    maxZoom: 5,
+                    minZoom: 3,
+                }).addTo(mymap);
+
+
+                // var ulkeler = [
+                //     { "name": "Almanya", "coords": [51.1657, 10.4515], "veri": "Almanya verisi" },
+                //     { "name": "Fransa", "coords": [46.6034, 1.8883], "veri": "Fransa verisi" },
+                //     { "name": "İspanya", "coords": [40.4637, -3.7492], "veri": "İspanya verisi" },
+                //     { "name": "İtalya", "coords": [41.8719, 12.5674], "veri": "İtalya verisi" },
+                //     { "name": "İngiltere", "coords": [55.3781, -3.4360], "veri": "İngiltere verisi" },
+                //     { "name": "Suriye", "coords": [34.8021, 38.9968], "veri": "Suriye verisi" }, // Suriye koordinatları
+                //     { "name": "Türkiye", "coords": [38.9637, 35.2433], "veri": "Türkiye verisi" }  // Türkiye koordinatları
+                // ];
+
+                // ulkeler.forEach(function (ulke) {
+                //     L.marker(ulke.coords, { icon: customIcon }).addTo(mymap)
+                //         .bindPopup("<b>" + ulke.name + "</b><br>" + ulke.veri + "<br>");
+
+
+                // });
+                // var Almanya = ulkeler[0].coords;
+                // var suriye = ulkeler[5].coords;
+                // var turkiye = ulkeler[6].coords;
+
+                // var line = L.polyline([suriye, turkiye, Almanya], { color: 'red' }).addTo(mymap);
+
+        
+    
+
+            </script>
+        </div>
+    </div>
+    <div style="margin-top: 50px;">
+        
+        <br><br><br><br><br>
+        <nav>
+            <div id="grafikler">
+
+                <h1>
+                    Grafikler
+                </h1>
+            </div>
+            <br><br><br>
+
+            <canvas id="line-chart2"></canvas>
+            <br><br>
+
+
+        </nav>
+    </div>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+            <a href="mailto:emingunes723@gmail.com">Bizimle İletişime Geçin</a>
+            </div>
+        </div>
+        
+    </footer>
+
+</body>
+<script src="charts.js"></script>
+<script src="api.js"></script>
+
+</html>
